@@ -2,7 +2,7 @@
 
 Table is an in memory key-value store library
 
-**NOTE: Table is just my toy project, it may have some bugs, so do not use Table in productio.**
+**NOTE: Table is just my toy project, it may have some bugs, so do not use Table in production**
 
 ## Features
 
