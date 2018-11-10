@@ -14,9 +14,12 @@ Table is an in memory key-value store library
 
 ## Build
 
-TODO
+```cpp
+mkdir build && cd build
+cmake .. && make -j4 && make install
+```
 
-*Maybe use CMake*
+*TODO: Add building of unit-test*
 
 ## Quick Start
 
