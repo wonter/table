@@ -19,7 +19,7 @@ mkdir build && cd build
 cmake .. && make -j4 && make install
 ```
 
-*TODO: Add building of unit-test*
+*TODO: Add building for unit-test*
 
 ## Quick Start
 
