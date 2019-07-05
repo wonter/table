@@ -34,9 +34,9 @@ char* MemoryPool::alloc_small(size_t size) {
             _block_queue[index].front().expire_at > std::chrono::steady_clock::now()) {
         refill(&_block_queue[index], size);
     }
-    const Block& front = _block_queue[index].front();
+    char *addr = _block_queue[index].front().addr;
     _block_queue[index].pop_front();
-    return front.addr;
+    return addr;
 }
 
 char* MemoryPool::alloc_large(size_t size) {
@@ -96,9 +96,9 @@ void MemoryPool::free_expired_block() {
             break;
         }
 
-        _block_persist.pop();
         delete[] front.addr;
         _blocks.erase(front.addr);
+        _block_persist.pop();
     }
 }
 
